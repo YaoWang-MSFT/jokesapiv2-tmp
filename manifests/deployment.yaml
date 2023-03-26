@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jokesapiv2-tmp-wflw
+  labels:
+    app: jokesapiv2-tmp-wflw
+  namespace: jokesapiv2-tmp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jokesapiv2-tmp-wflw
+  template:
+    metadata:
+      labels:
+        app: jokesapiv2-tmp-wflw
+    spec:
+      containers:
+        - name: jokesapiv2-tmp-wflw
+          image: crazk8sehiebdpdv2i7fmty6.azurecr.io/jokesapiv2-tmp:latest
+          ports:
+            - containerPort: 3000

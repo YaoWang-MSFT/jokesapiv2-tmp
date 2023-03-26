@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: jokesapiv2-tmp-wflw
+  namespace: jokesapiv2-tmp
+spec:
+  type: LoadBalancer
+  selector:
+    app: jokesapiv2-tmp-wflw
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
