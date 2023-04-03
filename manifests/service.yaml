@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: jsapitest4323run2
+  namespace: jsapitest4323run2-ns
+spec:
+  type: LoadBalancer
+  selector:
+    app: jsapitest4323run2
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
