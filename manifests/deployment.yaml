@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jsapitest40323
+  labels:
+    app: jsapitest40323
+  namespace: jsapitest40323-ns
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jsapitest40323
+  template:
+    metadata:
+      labels:
+        app: jsapitest40323
+    spec:
+      containers:
+        - name: jsapitest40323
+          image: crcrplaneazk8s4i7zlvwos5tsldzdw.azurecr.io/jsapitest40323:latest
+          ports:
+            - containerPort: 3000
