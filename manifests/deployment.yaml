@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jsapitest4323run2
+  labels:
+    app: jsapitest4323run2
+  namespace: jsapitest4323run2-ns
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jsapitest4323run2
+  template:
+    metadata:
+      labels:
+        app: jsapitest4323run2
+    spec:
+      containers:
+        - name: jsapitest4323run2
+          image: crcrplaneazk8s4i7zlvwos5tsldzdw.azurecr.io/jsapitest4323run2:latest
+          ports:
+            - containerPort: 3000
