@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jokes-4-5-23-run1
+  labels:
+    app: jokes-4-5-23-run1
+  namespace: jokes-4-5-23-run1-ns
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jokes-4-5-23-run1
+  template:
+    metadata:
+      labels:
+        app: jokes-4-5-23-run1
+    spec:
+      containers:
+        - name: jokes-4-5-23-run1
+          image: crazk8sh2qr5bsswntcdnxom.azurecr.io/jokes-4-5-23-run1:latest
+          ports:
+            - containerPort: 3000
