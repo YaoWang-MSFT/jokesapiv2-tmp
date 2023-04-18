@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: test0418-bug
+  name: test0418-fix
   labels:
-    app: test0418-bug
-  namespace: namespace-workflow-1681825823766
+    app: test0418-fix
+  namespace: namespace-workflow-1681835883753
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: test0418-bug
+      app: test0418-fix
   template:
     metadata:
       labels:
-        app: test0418-bug
+        app: test0418-fix
     spec:
       containers:
-        - name: test0418-bug
-          image: acrworkflow1681825823766.azurecr.io/image-workflow-1681825823766:latest
+        - name: test0418-fix
+          image: acrworkflow1681835883753.azurecr.io/image-workflow-1681835883753:latest
           ports:
             - containerPort: 3000
