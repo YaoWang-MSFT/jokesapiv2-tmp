@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: test0418-bug
-  namespace: namespace-workflow-1681825823766
+  name: test0418-fix
+  namespace: namespace-workflow-1681835883753
 spec:
   type: LoadBalancer
   selector:
-    app: test0418-bug
+    app: test0418-fix
   ports:
     - protocol: TCP
       port: 3000
